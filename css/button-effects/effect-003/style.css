@@ -23,6 +23,10 @@ a {
   transition: all 0.2s;
 }
 
+a:hover {
+  color: #111;
+}
+
 a:before {
   content: '';
   position: absolute;
@@ -31,29 +35,30 @@ a:before {
   top: 0;
   left: 0;
   background-color: gold;
-  /* color: #111; */
   z-index: -1;
-  /* opacity: 0; */
+  opacity: 0;
   transition: all 0.8s;
 }
-/* 
+
 a:hover:before {
   opacity: 1;
   transform: rotate(15deg);
-} */
-/* 
+}
+
 a span {
   color: transparent;
   position: relative;
-} */
-/* 
+}
+
 a span:before {
-  content: 'N';
+  content: 'S';
   position: absolute;
   color: gold;
   transition: all 0.2s;
-} */
-/* 
+}
+
 a:hover span:before {
-  font-size: 80px;
-} */
+  color: #111;
+  font-size: 160px;
+  transform: translate(-65%, -10%) rotate(360deg);
+}
