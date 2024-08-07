@@ -6,4 +6,49 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: #111;
+}
+
+button {
+  border: none;
+  padding: 24px 80px;
+  text-transform: uppercase;
+  font-size: 44px;
+  font-weight: 700;
+  font-family: 'EB Garamond', sans-serif;
+  text-align: center;
+  background-color: #ff4500;
+  color: khaki;
+  position: relative;
+  cursor: pointer;
+}
+
+button:before {
+  content: '';
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  top: -10px;
+  left: -10px;
+  border-top: 4px solid khaki;
+  border-left: 4px solid khaki;
+  transition: all 0.25s;
+}
+
+button:after {
+  content: '';
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  bottom: -10px;
+  right: -10px;
+  border-bottom: 4px solid khaki;
+  border-right: 4px solid khaki;
+  transition: all 0.25s;
+}
+
+button:hover:before, 
+button:hover:after {
+  height: 100%;
+  width: 100%;
 }
