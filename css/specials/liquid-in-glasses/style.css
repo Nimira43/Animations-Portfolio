@@ -10,8 +10,38 @@ section {
   align-items: center;
   height: 100vh;
   background: linear-gradient(
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.7)),
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.85)),
     url('../../../images/jpg/warehouse.jpg') no-repeat center;
   background-size: cover;
+  gap: 40px;
 }
+
+.glass {
+  position: relative;
+}
+
+.glass .inner {
+  position: relative;
+  width: 200px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  border: 8px solid transparent;
+}
+
+.inner:before {
+  content: '';
+  position: absolute;
+  width: 175px;
+  height: 30px;
+  border: 10px solid #444;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -15px;
+  box-shadow: 0 15px 0 #222;
+}
+
+.inner:after {}
+
