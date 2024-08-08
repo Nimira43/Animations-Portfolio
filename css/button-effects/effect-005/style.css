@@ -1,53 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Caveat:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fredericka+the+Great&family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+  --dk: #000;
+  --lg: #f5f5dc;
+  --or: #ff4500;
+  --go: #ffd700;
+  --sk: #39bcf0;
+}
+
 body {
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: var(--dk);
 }
 
 button {
-  border: none;
-  padding: 24px 80px;
-  text-transform: uppercase;
-  font-size: 44px;
-  font-weight: 700;
-  font-family: 'EB Garamond', sans-serif;
-  text-align: center;
-  background-color: #ff4500;
-  color: khaki;
   position: relative;
-  cursor: pointer;
+  width: 800px;
+  height: 240px;
+  background-color: var(--or);
+  color: var(--dk);
+  font-family: 'Fredericka the Great', serif;
+  font-weight: 700;
+  font-size: 90px;
+  border: none;
+  line-height: 240px;
+  letter-spacing: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: all 1.5s ease-in;
+}
+
+button:hover {
+  background-color: var(--dk);
+  color: var(--or);
+}
+
+button:before,
+button:after,
+span:before,
+span:after {
+  content: '';
+  position: absolute;
+  transition: all 2s;
 }
 
 button:before {
-  content: '';
-  position: absolute;
-  height: 48px;
-  width: 48px;
-  top: -10px;
-  left: -10px;
-  border-top: 4px solid khaki;
-  border-left: 4px solid khaki;
-  transition: all 0.25s;
+  height: 8px;
+  width: 100%;
+  top: 0;
+  left: -100%;
+  background-color: var(--lg);
 }
 
 button:after {
-  content: '';
-  position: absolute;
-  height: 48px;
-  width: 48px;
-  bottom: -10px;
-  right: -10px;
-  border-bottom: 4px solid khaki;
-  border-right: 4px solid khaki;
-  transition: all 0.25s;
+  height: 8px;
+  width: 100%;
+  bottom: 0;
+  right: -100%;
+  background-color: var(--sk);
 }
 
-button:hover:before,
-button:hover:after {
+span:before {
   height: 100%;
-  width: 100%;
+  width: 8px;
+  top: -100%;
+  right: 0;
+  background-color: var(--go);
+}
+
+span:after {
+  height: 100%;
+  width: 8px;
+  bottom: -100%;
+  left: 0;
+  background-color: var(--or);
+}
+
+button:hover:before {
+  left: 0;
+}
+
+button:hover:after {
+  right: 0;
+}
+
+button:hover span:before {
+  top: 0;
+}
+
+button:hover span:after {
+  bottom: 0;
 }
