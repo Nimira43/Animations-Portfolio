@@ -12,16 +12,24 @@ body {
 button {
   position: relative;
   background-color: orangered;
-  color: beige;
+  color: black;
   border: none;
   width: 800px;
   height: 240px;
   text-align: center;
   text-transform: uppercase;
   line-height: 240px;
-  font-family: 'Fredericka the Great', serif;
+  font-family: 'Fredericka the Great', serif;font-weight: 700;
   font-size: 90px;
   letter-spacing: 30px;
+  overflow: hidden;
+  transition: all 1.5s ease-in;
+}
+
+button:hover {
+  background-color: black;
+  color: orangered;
+  
 }
 
 button:before {
@@ -32,7 +40,7 @@ button:before {
   top: 0;
   left: -100%;
   background-color: beige;
-  transition: all 0.5s;
+  transition: all 2s;
 }
 
 button:hover:before {
@@ -46,8 +54,8 @@ button:after {
   width: 100%;
   bottom: 0;
   right: -100%;
-  background-color: skyblue;
-  transition: all 0.25s;
+  background-color: #39bcf0;
+  transition: all 2s;
 }
  
 button:hover:after {
@@ -57,29 +65,29 @@ button:hover:after {
 span:before {
   content: '';
   position: absolute;
-  height: 8px;
-  width: 100%;
-  top: 0;
-  left: -100%;
-  background-color: beige;
-  transition: all 0.5s;
+  height: 100%;
+  width: 8px;
+  top: -100%;
+  right: 0;
+  background-color: gold;
+  transition: all 2s;
 }
 
-span:hover:before {
-  left: 0;
+button:hover span:before {
+  top: 0;
 }
 
 span:after {
   content: '';
   position: absolute;
-  height: 8px;
-  width: 100%;
-  bottom: 0;
-  right: -100%;
-  background-color: skyblue;
-  transition: all 0.25s;
+  height: 100%;
+  width: 8px;
+  bottom: -100%;
+  left: 0;
+  background-color: orangered;
+  transition: all 2s;
 }
  
-span:hover:after {
-  right: 0;
+button:hover span:after {
+  bottom: 0;
 }
