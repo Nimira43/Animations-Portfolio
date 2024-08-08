@@ -18,20 +18,21 @@ body {
   justify-content: center;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
+  background-color: var(--dk);
   overflow: hidden;
 }
 
 a {
   position: relative;
-  width: 160px;
-  height: 60px;
-  color: var(--dk);
-  font-size: 25px;
+  width: 320px;
+  height: 120px;
+  color: var(--or);
+  font-size: 50px;
   text-decoration: none;
-  line-height: 60px;
+  line-height: 120px;
   text-align: center;
   text-transform: capitalize;
-  transition: all 0.2s;
+  transition: all 0.5s;
   overflow: hidden;
 }
 
@@ -42,7 +43,7 @@ a span {
   top: 0;
   left: 0;
   background-color: transparent;
-  border: 2px solid var(--dk);
+  border: 4px solid var(--lg);
   z-index: -1;
 
 }
@@ -52,16 +53,16 @@ span:before {
   position: absolute;
   width: 8%;
   height: 500%;
-  background-color: var(--lg);
+  background-color: var(--dk);
   top: 50%;
   left: 50%;
-  transition: all 0.2s;
+  transition: all 0.5s;
   transform: translate(-50%, -50%) rotate(-60deg);
 }
 
 a:hover span:before {
   width: 100%;
-  background-color: var(--dk);
+  background-color: var(--or);
   transform: translate(-50%, -50%) rotate(60deg);
 }
 
