@@ -9,90 +9,36 @@
 }
 
 body {
-  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   background-color: var(--dk);
+  overflow: hidden;
 }
 
-button {
+a {
   position: relative;
-  width: 800px;
-  height: 240px;
-  background-color: var(--or);
-  color: var(--dk);
+  width: 320px;
+  height: 120px;
+  color: var(--or);
   font-family: 'Fredericka the Great', serif;
   font-weight: 700;
-  font-size: 90px;
-  border: none;
-  line-height: 240px;
-  letter-spacing: 30px;
+  font-size: 50px;
+  text-decoration: none;
+  line-height: 120px;
   text-align: center;
   text-transform: uppercase;
-  overflow: hidden;
-  transition: all 1.5s ease-in;
+  transition: all 0.2s ;
 }
 
-button:hover {
-  background-color: var(--dk);
-  color: var(--or);
-}
-
-button:before,
-button:after,
-span:before,
-span:after {
-  content: '';
+a span {
   position: absolute;
-  transition: all 2s;
-}
-
-button:before {
-  height: 8px;
   width: 100%;
-  top: 0;
-  left: -100%;
-  background-color: var(--lg);
-}
-
-button:after {
-  height: 8px;
-  width: 100%;
-  bottom: 0;
-  right: -100%;
-  background-color: var(--sk);
-}
-
-span:before {
   height: 100%;
-  width: 8px;
-  top: -100%;
-  right: 0;
-  background-color: var(--go);
-}
-
-span:after {
-  height: 100%;
-  width: 8px;
-  bottom: -100%;
-  left: 0;
-  background-color: var(--or);
-}
-
-button:hover:before {
-  left: 0;
-}
-
-button:hover:after {
-  right: 0;
-}
-
-button:hover span:before {
   top: 0;
+  left: 0;
+  background-color: transparent;
+  border: 4px solid var(--lg);
 }
 
-button:hover span:after {
-  bottom: 0;
-}
