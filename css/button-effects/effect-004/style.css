@@ -6,48 +6,80 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: black;
 }
 
 button {
-  border: none;
-  padding: 24px 80px;
-  text-transform: uppercase;
-  font-size: 44px;
-  font-weight: 700;
-  font-family: 'EB Garamond', sans-serif;
-  text-align: center;
-  background-color: #ff4500;
-  color: khaki;
   position: relative;
-  cursor: pointer;
+  background-color: orangered;
+  color: beige;
+  border: none;
+  width: 800px;
+  height: 240px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 240px;
+  font-family: 'Fredericka the Great', serif;
+  font-size: 90px;
+  letter-spacing: 30px;
 }
 
 button:before {
   content: '';
   position: absolute;
-  height: 48px;
-  width: 48px;
-  top: -10px;
-  left: -10px;
-  border-top: 4px solid khaki;
-  border-left: 4px solid khaki;
-  transition: all 0.25s;
+  height: 8px;
+  width: 100%;
+  top: 0;
+  left: -100%;
+  background-color: beige;
+  transition: all 0.5s;
+}
+
+button:hover:before {
+  left: 0;
 }
 
 button:after {
   content: '';
   position: absolute;
-  height: 48px;
-  width: 48px;
-  bottom: -10px;
-  right: -10px;
-  border-bottom: 4px solid khaki;
-  border-right: 4px solid khaki;
+  height: 8px;
+  width: 100%;
+  bottom: 0;
+  right: -100%;
+  background-color: skyblue;
   transition: all 0.25s;
 }
-
-button:hover:before,
+ 
 button:hover:after {
-  height: 100%;
+  right: 0;
+}
+
+span:before {
+  content: '';
+  position: absolute;
+  height: 8px;
   width: 100%;
+  top: 0;
+  left: -100%;
+  background-color: beige;
+  transition: all 0.5s;
+}
+
+span:hover:before {
+  left: 0;
+}
+
+span:after {
+  content: '';
+  position: absolute;
+  height: 8px;
+  width: 100%;
+  bottom: 0;
+  right: -100%;
+  background-color: skyblue;
+  transition: all 0.25s;
+}
+ 
+span:hover:after {
+  right: 0;
 }
